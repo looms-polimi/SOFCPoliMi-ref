@@ -1,0 +1,9 @@
+loadModel(Modelica, {"4.0.0"}); getErrorString();
+loadFile("C:/Users/Admin/Documents/Dottorato/SOFCPoliMi/SOFCPoliMi/package.mo"); getErrorString();
+setCommandLineOptions("--matchingAlgorithm=PFPlusExt --indexReductionMethod=dynamicStateSelection -d=initialization,NLSanalyticJacobian --maxSizeNonlinearTearing=40000"); getErrorString();
+simulate(SOFCPoliMi.Tests.OpenModelica.BenchmarkCammarata,simflags="-ils=100",variableFilter="stack\.module\[\d+\]\.pen\.j$|stack\.module\[\d+\]\..*\.Tout$|stack\.module\[\d+\]\.pen\.T$|stack\.module\[\d+\]\.pen\.vPEN$",stopTime=1000); getErrorString();
+simulate(SOFCPoliMi.Tests.OpenModelica.BenchmarkSalogniColonnaIEA,simflags="-ils=100",variableFilter="stack\.module\[\d+\]\.pen\.j$|stack\.module\[\d+\]\..*\.Tout$|stack\.module\[\d+\]\.pen\.T$|stack\.module\[\d+\]\.pen\.vPEN$",stopTime=1000); getErrorString();
+simulate(SOFCPoliMi.Tests.OpenModelica.BenchmarkNonLinConcLosses,simflags="-ils=100",variableFilter="stack\.module\[\d+\]\.pen\.j$|stack\.module\[\d+\]\..*\.Tout$|stack\.module\[\d+\]\.pen\.T$|stack\.module\[\d+\]\.pen\.vPEN$",stopTime=1000); getErrorString();
+simulate(SOFCPoliMi.Tests.OpenModelica.BenchmarkLinConcLosses,simflags="-ils=100",variableFilter="stack\.module\[\d+\]\.pen\.j$|stack\.module\[\d+\]\..*\.Tout$|stack\.module\[\d+\]\.pen\.T$|stack\.module\[\d+\]\.pen\.vPEN$",stopTime=1000); getErrorString();
+simulate(SOFCPoliMi.Tests.OpenModelica.BenchmarkNonLinConcLossesHigherPorosity,simflags="-ils=100",variableFilter="stack\.module\[\d+\]\.pen\.j$|stack\.module\[\d+\]\..*\.Tout$|stack\.module\[\d+\]\.pen\.T$|stack\.module\[\d+\]\.pen\.vPEN$",stopTime=1000); getErrorString();
+simulate(SOFCPoliMi.Tests.OpenModelica.BenchmarkLinConcLossesHigherCurrent,simflags="-ils=100",variableFilter="stack\.module\[\d+\]\.pen\.j$|stack\.module\[\d+\]\..*\.Tout$|stack\.module\[\d+\]\.pen\.T$|stack\.module\[\d+\]\.pen\.vPEN$",stopTime=1000); getErrorString();
